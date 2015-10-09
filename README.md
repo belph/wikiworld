@@ -36,3 +36,12 @@ last line of the last file as they are just square brackets enclosing the
 whole data dump.  After all these operations we will be left with a number
 of files in which all lines are strings which can be parsed into JSON
 objects with minimal processing.
+
+The first line of the first file and the last line of the last file can be
+removed quickly using the following commands,
+
+    tail -n +2 wikidata-20151005-0000.json > tmp.json; mv tmp.json wikidata-20151005-0000.json
+
+    head -n -1 wikidata-20151005-0186.json > tmp.json; mv tmp.json wikidata-20151005-0186.json
+
+These commands can definitely be optimized, but they work for now.
