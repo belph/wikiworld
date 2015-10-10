@@ -28,10 +28,11 @@ description of the WikiData data model can be found here,
 
   - https://www.mediawiki.org/wiki/Wikibase/DataModel/Primer
 
-## Load into MongoDB
+# Load into MongoDB
 
 The data dumps can be loaded into a mongo data base using the
 ``insert_data_dump_into_mongo.py``.  The script will make one collection
 for ``items`` and one collection for ``properties``.  In addition, it will
 index these collections on the ``id`` field (the numeric WikiData ID fields
-that begin with a Q for items or a P for properties).
+that begin with a Q for items or a P for properties).  For a full data
+dump this process will take several hours.
